@@ -1,0 +1,625 @@
+html {
+    scrollbar-width: auto;
+    scrollbar-color: #333333 #000000;
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --primary-color: rgb(229, 9, 20);
+    --primary-dark-color: rgb(193, 17, 25);
+}
+
+body {
+    background-color: #000000;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.862), rgba(0, 0, 0, 0.604)), url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 85vw;
+    margin: auto;
+    height: 80px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.signin-btn {
+    text-decoration: none;
+    padding: 10px 18px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.signin-btn:hover {
+    background-color: var(--primary-dark-color);
+}
+
+main {
+    height: 630px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 43vw;
+    margin: auto;
+}
+
+.innerhero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.innerhero h1 {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: unset;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.innerhero p {
+    font-family: unset;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.innerhero2 input {
+    width: 315px;
+    height: 55px;
+    background-color: #11111196;
+    color: white;
+    font-size: large;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.innerhero2 button {
+    background-color: var(--primary-color);
+    padding: 10px;
+    width: 200px;
+    height: 55px;
+    border-radius: 3px;
+    margin: 10px 10px 10px 0px;
+    border: none;
+    color: white;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.innerhero2 button:hover {
+    background-color: var(--primary-dark-color);
+}
+
+.divider-section {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.arch-line {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160%;
+    height: 400px;
+    border-top: 4px solid #e50914;
+    border-radius: 50% 50% 0 0;
+    z-index: 2;
+    background: #000000;
+}
+
+.arch-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 100px;
+    background: radial-gradient(ellipse at top,
+            rgba(45, 66, 115, 0.9) 0%,
+            rgba(0, 0, 0, 0) 75%);
+    z-index: 1;
+}
+
+.otherscont {
+    width: 90vw;
+    margin: auto;
+}
+
+.trending {
+    margin-top: 100px;
+}
+
+.trending h2 {
+    margin-bottom: 20px;
+}
+
+.innertrending {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    gap: 40px;
+    /* height: 350px; */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.arrow {
+    background: rgba(0, 0, 0, 0.7);
+    /* Darker background hides cards better */
+    color: white;
+    border: none;
+    /* Fixed width */
+    /* Full height of the slider */
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    transition: background 0.3s;
+    height: 25%;
+    width: 2%;
+    border-radius: 5px;
+    background-color: #020202ed;
+    margin: 1px;
+}
+
+.arrow.hidden {
+    display: none;
+}
+
+.arrow.left {
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.arrow:hover {
+    background: rgba(106, 104, 104, 0.8);
+}
+
+.moviebox {
+    height: 95%;
+    width: 200px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+    position: relative;
+    transition: transform 0.5s ease;
+    margin-top: 25px;
+    flex-shrink: 0;
+}
+
+.moviebox:hover {
+    transform: scale(1.05);
+}
+
+.moviebox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.moviebox h1 {
+    position: absolute;
+    font-size: 90px;
+    bottom: 5px;
+    color: #000000;
+    -webkit-text-stroke: 2px #ffffff;
+    left: -25px;
+}
+
+.reasons {
+    margin: 100px auto;
+    width: 100%;
+    height: 100%;
+}
+
+.reasonsinner {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    /* border: 2px solid white; */
+    width: 290px;
+    height: 285px;
+    border-radius: 20px;
+    position: relative;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    padding: 5px;
+}
+
+.card h2 {
+    margin: 10px 0px 15px 10px;
+}
+
+.card p {
+    margin: 15px 0px 15px 10px;
+    padding: 5px;
+    color: rgb(187, 186, 193);
+}
+
+.card img {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.Qas {
+    /* border: 2px solid white; */
+    height: 600px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin: auto;
+}
+
+.Qas h2 {
+    margin-bottom: 1.5rem;
+}
+
+.Qasblock {
+    /* margin-bottom: 20px; */
+    background-color: #2d2d2d;
+    /* margin: 0.5rem auto; */
+    max-width: 100%;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.faq-header {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.faq-answer {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    background-color: #2d2d2d;
+    display: none;
+    /* Hidden by default */
+    line-height: 1.8rem;
+}
+
+/* Class to toggle via JavaScript */
+.Qasblock.open .faq-answer {
+    display: block;
+}
+
+.Qasblock.open .icon {
+    transform: rotate(45deg);
+    /* Turns + into x */
+}
+
+.downform {
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.downform input {
+    width: 30rem;
+}
+
+.downform buttom {
+    width: 15rem;
+}
+
+/* --- FOOTER STYLING --- */
+.footer {
+    max-width: 80vw;
+    margin: 50px auto;
+    padding: 20px 0;
+    color: #b3b3b3;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer ul li a {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.footer-country {
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+.footer p:nth-of-type(3) {
+    font-size: 0.9rem;
+    margin-top: 2.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer p:nth-of-type(3) a {
+    color: rgb(68, 142, 244);
+    cursor: pointer;
+}
+
+.footer button {
+    margin-top: 1.3rem;
+    width: 130px;
+    height: 35px;
+    background-color: #0f0f0f;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(66, 66, 66);
+    cursor: pointer;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* For Tablets (max-width: 950px) */
+@media (max-width: 950px) {
+    .hero {
+        width: 80vw;
+    }
+
+    .innerhero h1 {
+        font-size: 2.5rem;
+    }
+
+    .reasonsinner {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
+    .navbar {
+        width: 95vw;
+        padding: 20px 10px;
+    }
+
+    .logo img {
+        height: 25px;
+    }
+
+    .innerhero h1 {
+        font-size: 2rem;
+    }
+
+    .innerhero p {
+        font-size: 1rem;
+    }
+
+    .form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .innerhero2 input,
+    .downform input {
+        width: 90vw;
+        margin-right: 0;
+    }
+
+    .innerhero2 button {
+        width: 160px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .arch-line {
+        width: 250%;
+        top: 80px;
+    }
+
+    .reasonsinner {
+        justify-content: center;
+    }
+
+    .card {
+        width: 90vw;
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .faq-header {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Qas {
+        height: auto;
+    }
+
+    /* Allow height to grow with content */
+}
+
+/* --- GLOBAL RESPONSIVE PATCH --- */
+
+@media (max-width: 1024px) {
+    .hero {
+        width: 80vw;
+    }
+
+    .innerhero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Hero Section */
+    .innerhero h1 {
+        font-size: 2.2rem;
+    }
+
+    .innerhero2 p {
+        padding: 0 20px;
+    }
+
+    /* Form Stacking */
+    .form {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .innerhero2 input,
+    .downform input {
+        width: 100% !important;
+        margin: 10px 0;
+    }
+
+    .innerhero2 button {
+        width: 180px;
+    }
+
+    /* Reasons Cards */
+    .reasonsinner {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        padding-bottom: 50px;
+    }
+
+    /* Trending Slider */
+    .moviebox {
+        width: 150px;
+    }
+
+    .moviebox h1 {
+        font-size: 60px;
+        left: -15px;
+    }
+
+    .arrow {
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .innerhero h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .signin-btn {
+        padding: 6px 12px;
+    }
+
+    /* Adjust Arch Line for Mobile */
+    .arch-line {
+        width: 300%;
+        top: 80px;
+    }
+
+    /* FAQ Text */
+    .faq-header {
+        font-size: 1.1rem;
+        padding: 1.2rem;
+    }
+
+    .faq-answer {
+        font-size: 1rem;
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 0.8rem;
+    }
+}
+
+/* Ensure Qas container doesn't overflow */
+.Qas {
+    height: auto;
+    min-height: 500px;
+    padding-bottom: 50px;
+}
